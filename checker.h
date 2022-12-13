@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <assert.h>
-
 #define RangeCheck(X,Y,Z) (X<=Y || X>=Z)?0:1
 
 int Check_ChargeRate(float chargeRate);
@@ -20,13 +17,4 @@ int Check_ChargeRate(float chargeRate)
    return 0;
    else
    return 1;
-}
-
-
-int main()
-{
- 
-  assert(batteryIsOk(25, 70, 0.7));
-  assert(!batteryIsOk(50, 85, 0));
-
 }
