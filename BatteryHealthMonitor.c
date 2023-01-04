@@ -28,8 +28,7 @@ static int SocRangeCheck(int soc, int MinRange, int MaxRange)
 	else if(soc>=MaxRange)
 	{
 		return 0;
-	}
-	
+	}	
 }
 
 static void CalculateDrianPeakThreshold(int MinThreshold , int MaxThreshold)
@@ -79,8 +78,7 @@ static WarningRanges ReturnSocBreach(int soc)
 	else
 	{
 		return HIGH_SOC_BREACH;
-	}
-	
+	}	
 }
 
 static WarningRanges ReturnSocWarning(int soc)
@@ -97,6 +95,5 @@ static WarningRanges ReturnSocWarning(int soc)
 		Returnstaus = HIGH_SOC_WARNING;
 	}
 	
-	return Returnstaus;
-	
+	return Returnstaus;	
 }
