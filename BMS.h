@@ -14,7 +14,6 @@ typedef enum {
     DEFAULT,
     ENGLISH,
     GERMAN,
-    CHINA,
 	MAX_LANG
 }Select_Language;
 
