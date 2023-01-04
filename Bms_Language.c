@@ -1,7 +1,7 @@
 #include "BMS.h"
 
 const char* Store_WarningMessage[MESSAGE_MAX];
-/*Warning Message language table*/
+
 const char* WarningMessageTable[MAX_LANG][MESSAGE_MAX] = {
 		{/*Language : DEFAULT */
 			"LOW_SOC_BREACH","LOW_SOC_WARNING","SOC_NORMAL","HIGH_SOC_WARNING","HIGH_SOC_BREACH","SOC_UNDEFINED"},
@@ -10,11 +10,9 @@ const char* WarningMessageTable[MAX_LANG][MESSAGE_MAX] = {
 		{/*Language : GERMAN */
 			"LOW_SOC_BREACH","LOW_SOC_WARNUNG","SOC_NORMAL","HIGH_SOC_WARNUNG","HIGH_SOC_BREACH","SOC_UNDEFINED"},
 		{ /*Language : CHINA */
-			"L_S_BREACHEN","L_S_WARN!!","NORMAL","H_S_WARN!!","H_S_BREACHEN","UNDEFINED"}
-		
+			"L_S_BREACHEN","L_S_WARN!!","NORMAL","H_S_WARN!!","H_S_BREACHEN","UNDEFINED"}		
 	};
 
-/*Function to store the requiested language*/
 void SelectLanguageandWarnigMessage(Select_Language Language)
 {   
    if(Language < MAX_LANG)
@@ -26,7 +24,6 @@ void SelectLanguageandWarnigMessage(Select_Language Language)
     } 
 }
 
-/*This function returns warning message*/
 const char* ReturnWarningMessage(int soc)
 {
    return Store_WarningMessage[(BatteryHelathMonitor(soc))];
